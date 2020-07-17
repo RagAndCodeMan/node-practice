@@ -37,6 +37,6 @@ app.post("/create_result/", (req, res) => {
     }
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("The server has been listened")
 })
