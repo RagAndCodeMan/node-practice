@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}))
 
+app.get("/favicon.ico", (req, res) => {
+    res.sendfile("./favicon.ico")
+})
+
 app.get("/", (req, res) => {
     res.setHeader("Content-Type", "text/html; charset=utf-8")
     res.end(`
